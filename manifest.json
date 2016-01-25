@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+
+	"name": "PadJect",
+	"description": "Inject margin into webpages. Useful for viewing old static html pages. Uses Keypress library.",
+	"version": "1.0",
+
+	"author": "Devesh Khandelwal",
+	"homepage_url": "https://github.com/devkhan/PadJect",
+	"short_name": "padject",
+
+	"permissions": [
+		"activeTab"
+	],
+
+	"content_scripts": [
+		{
+			"matches": [ "http://*/*", "https://*/*" ],
+			"js": [ "keypress.min.js", "main.js" ],
+			"run_at": "document_end"
+		}
+	]
+
+}
